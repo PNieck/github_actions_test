@@ -33,4 +33,4 @@ jobs:
         with:
           files: build/app/outputs/flutter-apk/*.apk
           prerelease: true
-          tag: new_release
+          tag_name: new_release
