@@ -31,6 +31,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: build/app/outputs/flutter-apk/*.apk
+          files: build/app/outputs/flutter-apk/app-release.apk
           prerelease: true
           tag_name: new_release
