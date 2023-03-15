@@ -29,5 +29,5 @@ jobs:
       - run: flutter build apk
       - uses: pipe-cd/actions-gh-release@v2.3.4
         with:
-          release_file: 'build/app/outputs/apk/release/app-release.apk'
+          release_file: build/app/outputs/apk/release/app-release.apk
           token: ${{ secrets.GITHUB_TOKEN }}
