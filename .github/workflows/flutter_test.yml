@@ -26,3 +26,9 @@ jobs:
       - run: flutter analyze
       - name: Run tests
         run: flutter test
+      - run: flutter build apk
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: "build/app/outputs/flutter-apk/*.apk"
