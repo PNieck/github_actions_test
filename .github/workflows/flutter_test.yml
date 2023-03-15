@@ -20,6 +20,7 @@ jobs:
         with:
           flutter-version: '3.x'
       - run: flutter pub get
+      - run: dart format --set-exit-if-changed lib/
       - run: flutter analyze
       - name: Run tests
         run: flutter test
