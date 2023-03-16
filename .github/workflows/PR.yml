@@ -9,13 +9,13 @@ env:
 
 jobs:
   test_flutter:
-    uses: ./.github/flutter_tests.yml
+    uses: ./.github/workflows/flutter_tests.yml
     with:
       path_to_project: $FLUTTER_PROJ_DIR
 
 
   try_build_proj:
-    uses: ./.github/flutter_try_build.yml
+    uses: ./.github/workflows/flutter_try_build.yml
     with:
       path_to_project: $FLUTTER_PROJ_DIR
 
