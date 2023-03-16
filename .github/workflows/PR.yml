@@ -4,18 +4,15 @@ on:
   - pull_request
   - workflow_dispatch
 
-env:
-  FLUTTER_PROJ_DIR: client/
-
 jobs:
   test_flutter:
     uses: ./.github/workflows/flutter_tests.yml
     with:
-      path_to_project: ${{ env.FLUTTER_PROJ_DIR }}
+      path_to_project: client/
 
 
   try_build_proj:
     uses: ./.github/workflows/flutter_try_build.yml
     with:
-      path_to_project: ${{ env.FLUTTER_PROJ_DIR }}
+      path_to_project: client/
 
