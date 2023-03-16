@@ -9,28 +9,12 @@ env:
 
 jobs:
   test_flutter:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Setup Flutter
-        uses: ./.github/flutter_setup.yml
-        with:
-          path_to_project: $FLUTTER_PROJ_DIR
-      - name: Run flutter tests
-        uses: ./.github/flutter_tests.yml
-        with:
-          path_to_project: $FLUTTER_PROJ_DIR
+    uses: ./.github/flutter_tests.yml
+    with:
+      path_to_project: $FLUTTER_PROJ_DIR
 
 
   try_build_proj:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Setup Flutter
-        uses: ./.github/flutter_setup.yml
-        with:
-          path_to_project: $FLUTTER_PROJ_DIR
-      - name: Try building Flutter project
-        uses: ./.github/flutter_try_build.yml
-        with:
-          path_to_project: $FLUTTER_PROJ_DIR
+    uses: ./.github/flutter_try_build.yml
+    with:
+      path_to_project: $FLUTTER_PROJ_DIR
