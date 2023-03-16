@@ -1,0 +1,25 @@
+name: Test Flutter App
+
+on:
+  workflow_call:
+    inputs:
+      path_to_project:
+        required: true
+        type: string
+
+jobs:
+  test_application:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ inputs.path_to_project }}
+    
+    steps:
+      - name: Flutter setup
+        uses: ./.github/flutter_setup.yml
+      - name: Check code formatting
+        run: dart format --set-exit-if-changed lib/
+      - name:  Analyze project
+        run: flutter analyze
+      - name: Run tests
+        run: flutter test
