@@ -13,11 +13,11 @@ jobs:
 
     steps:
       - name: Setup Flutter
-        uses: ./.github/flutter_setup.yml
+        uses: ./.github/flutter_setup.yml@main
         with:
           path_to_project: $FLUTTER_PROJ_DIR
       - name: Run flutter tests
-        uses: ./.github/flutter_tests.yml
+        uses: ./.github/flutter_tests.yml@main
         with:
           path_to_project: $FLUTTER_PROJ_DIR
 
@@ -27,10 +27,10 @@ jobs:
 
     steps:
       - name: Setup Flutter
-        uses: ./.github/flutter_setup.yml
+        uses: ./.github/flutter_setup.yml@main
         with:
           path_to_project: $FLUTTER_PROJ_DIR
       - name: Try building Flutter project
-        uses: ./.github/flutter_try_build.yml
+        uses: ./.github/flutter_try_build.yml@main
         with:
           path_to_project: $FLUTTER_PROJ_DIR
