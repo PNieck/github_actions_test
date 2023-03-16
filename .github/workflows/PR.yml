@@ -18,3 +18,4 @@ jobs:
     uses: ./.github/flutter_try_build.yml
     with:
       path_to_project: $FLUTTER_PROJ_DIR
+
