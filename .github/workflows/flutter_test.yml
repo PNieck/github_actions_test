@@ -1,7 +1,7 @@
 name: Build Flutter android app
 
 on:
-  - pull_request
+  - push
   - workflow_dispatch
 
 jobs:
@@ -33,4 +33,5 @@ jobs:
         with:
           files: client/build/app/outputs/flutter-apk/app-release.apk
           prerelease: true
+          generate_release_notes: true
           tag_name: new_release
